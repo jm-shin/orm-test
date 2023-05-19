@@ -1,13 +1,13 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@mikro-orm/nestjs';
-import { UserEntity } from '../entities/user.entity';
 import { EntityRepository } from '@mikro-orm/core';
+import { MobileUser } from '../entities/mobile-user';
 
 @Injectable()
 export class UserRepository {
   constructor(
-    @InjectRepository(UserEntity)
-    private readonly userRepository: EntityRepository<UserEntity>,
+    @InjectRepository(MobileUser)
+    private readonly userRepository: EntityRepository<MobileUser>,
   ) {}
 
   async createUser(userInfo) {
