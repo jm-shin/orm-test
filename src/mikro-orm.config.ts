@@ -3,7 +3,7 @@ import { Options } from '@mikro-orm/core';
 import { SqlHighlighter } from '@mikro-orm/sql-highlighter';
 
 const logger = new Logger('MikroORM');
-const cofig: Options = {
+const config: Options = {
   entities: ['./dist/entities'],
   entitiesTs: ['./src/entities'],
   dbName: 'test',
@@ -14,4 +14,4 @@ const cofig: Options = {
   logger: logger.log.bind(logger),
 };
 
-export default cofig;
+export default config;
